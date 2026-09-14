@@ -1,4 +1,4 @@
-# WirelessGhost Firmware and Attaky ports 👻
+# WirelessGhost Firmware 👻
 ### Next-Generation Modular Wireless Recon & Input Platform for the Cyber Deck Plus
 
 [![Target Chip](https://shields.io)](https://espressif.com)
@@ -6,9 +6,19 @@
 [![Hardware](https://shields.io)](https://github.com)
 [![License](https://shields.io)](LICENSE)
 
-**WirelessGhost Firmware** is a highly optimized, modular firmware framework built from the ground up for portable security reconnaissance and structural automation. Engineered specifically for the **Cyber Deck Plus** architecture (powered by the **Espressif ESP32-S3 dual-core 240MHz SoC with 16MB Flash and 8MB External PSRAM**), this operating system leverages high-performance graphical engines and deep-level hardware acceleration to provide real-time environment telemetry.
+**WirelessGhost Firmware** is a highly optimized, modular wireless reconnaissance and automation engine compiled specifically for the **Cyber Deck Plus** architecture (powered by the **Espressif ESP32-S3 dual-core 240MHz SoC with 16MB Flash and 8MB External PSRAM**). Deployed as a dynamic target binary, this firmware utilizes high-performance graphical subsystems and deep-level radio acceleration loops to deliver real-time environmental processing.
 
 > ⚠️ **Disclaimer:** This project is developed strictly for educational purposes, authorized security auditing, and standalone defensive network monitoring. Please use responsibly and in compliance with your local laws.
+
+---
+
+## ⚡ Deployment & Launch Ecosystem
+
+WirelessGhost Firmware sits natively within a versatile multi-boot ecosystem. Rather than wiping out the layout configuration or restricting the platform to a single runtime module, deployment utilizes an SD card storage paradigm managed directly by the primary system loader:
+
+1. **Core Flash Layer:** The foundational **bmorcelli launcher (M5Launcher)** is flashed directly onto the ESP32-S3 device's onboard storage.
+2. **SD Storage Array:** The compiled **WirelessGhost** tracking binary (`.bin`) along with companion environments like **Retro-Go** are loaded directly onto the root folder of the high-speed SD card.
+3. **Dynamic Execution:** Using the **Attaky-Firmware-builder** framework parameters, the system boots into the main launcher graphical selection tree, enabling on-the-fly partition allocation, software installations, and modular execution choices.
 
 ---
 
@@ -57,7 +67,7 @@ WirelessGhost Firmware is divided into structural phases to ensure low-level dri
 
 ## 🛠️ Hardware Specification Requirements
 
-This operating system is precisely tuned to work with the following baseline specifications. Loading these modules onto standard boards without adequate external memory configurations will cause heap cap faults:
+This firmware configuration is precisely tuned to work with the following baseline specifications. Loading these modules onto standard boards without adequate external memory configurations will cause heap cap faults:
 
 * **Microcontroller:** Espressif ESP32-S3 (Xtensa Dual-Core LX7, 240MHz).
 * **Memory Configuration:** 16MB Flash Allocation / **8MB External PSRAM (Strictly Required)** for NimBLE scan tables.
@@ -66,34 +76,23 @@ This operating system is precisely tuned to work with the following baseline spe
 
 ---
 
-## 🚀 Building & Flashing
+## 🚀 SD Target Setup & Installation Deploys
 
-This project is configured natively for **PlatformIO**. It integrates with the `arduino-esp32 v3.x` core and uses advanced compiler flags to optimize code placement within the fast internal RAM (`IRAM`).
+Because the execution targets sit inside the dynamic multi-boot structure of the custom partition launcher, flashing procedures differ from standalone scripts:
 
-### 1. Clone the Architecture Repository
-```bash
-git clone https://github.com/WirelessGhost-OS.git
-cd WirelessGhost-OS
+### 1. Flash the Primary Multi-Boot Launcher
+Use the web flasher tool interface or platform CLI options to commit the base launcher system binary framework onto the core ESP32-S3 internal block storage partition array.
+
+### 2. Stage Assets on the Local SD Card Storage
+Insert your micro SD module into your development workstation environment and structure the root partition tree exactly as follows:
+```text
+/ (SD Card Root)
+├── wirelessghost_v0.1.0.bin
+└── retro_go_launcher.bin
 ```
 
-### 2. Verify Your Configuration Pack
-Ensure your localized configuration matches your device deployment environment inside your configuration profiles:
-```ini
-[env:cyber-deck-plus]
-platform = espressif32
-board = esp32-s3-devkitc-1
-framework = arduino
-board_build.partitions = default_16MB.csv
-build_flags = 
-    -DBOARD_HAS_PSRAM
-    -DARDUINO_USB_CDC_ON_BOOT=1
-```
-
-### 3. Build and Upload
-```bash
-# Compile and flash binary via localized PlatformIO CLI channels
-pio run --target upload
-```
+### 3. Execution & Run Phase via Launcher Core
+Mount the indexed SD storage target directly onto your **Cyber Deck Plus** peripheral slot array and power up the machine. Use the graphical UI matrix controls to launch, partition, install, or refresh the firmware binaries smoothly on execution.
 
 ---
 
@@ -122,7 +121,7 @@ WirelessGhost Firmware is, and always will be, free and open for independent mak
 
 * **Patreon:** Join my developer tier to get access to early-compiled alpha binaries of upcoming Recon modules before they drop publicly.
 * **Buy Me a Coffee:** Support my monthly token and hardware testing budget with a simple one-time contribution.
-* **Hardware Kits:** Pre-assembled, custom-branded physical device arrays pre-flashed with stable firmware builds are available periodically on my project dashboard.
+* **Hardware Kits:** Pre-assembled, custom-branded physical device arrays pre-flashed with stable firmware builds are available periodically on our project dashboard.
 
 ---
 Developed by **WirelessGhost** 👻 • Built for the Portable Hardware Community.
