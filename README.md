@@ -120,7 +120,7 @@ I built WirelessGhost Firmware as an open platform to empower makers and indepen
 WirelessGhost Firmware is, and always will be, free and open for independent makers. If this firmware has saved you time on your hardware build, helped you learn microcontroller engineering, or looks amazing on your custom deck screen, consider supporting development:
 
 * **Patreon:** Join my developer tier to get access to early-compiled alpha binaries of upcoming Recon modules before they drop publicly.
-* **Buy Me a Coffee:** Support my monthly token and hardware testing budget with a simple one-time contribution.
+* **Buy Me a Pizza- one time Little Caesars pizza or frozen pizza.
 * **Hardware Kits:** Pre-assembled, custom-branded physical device arrays pre-flashed with stable firmware builds are available periodically on our project dashboard.
 
 ---
