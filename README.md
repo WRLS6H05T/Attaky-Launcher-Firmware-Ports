@@ -1,4 +1,4 @@
-Custom Firmware Release (Attaky Theme Carousel)
+B-Morcelli themed for the Attaky.
 This release features a complete visual re-theme based on the original work by b_morcelli, now fully redesigned to match the Attaky theme aesthetic.
 
 Key Updates
@@ -15,8 +15,12 @@ OTA updates have been removed for now (will be added back once fully functional)
 Permanent removal:
 The charge configuration option has been removed.
 
-Place the bin files on the sd card and install and launch.
-
+Place your choice of bin files on a sd card and install and launch to use the firmware
+Can be used with multiple sd cards.
+NEXT FIXES
+UI boundries for removal of fimware
+Smoother transitions between Apps
+Customizable UI
 
 Thanks to the Attaky firmware builder and Opencode. 
 Thanks to the open source b-morcelli launcher for a platform to build on for makers and open source projects.
