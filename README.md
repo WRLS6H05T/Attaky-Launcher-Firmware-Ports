@@ -1,5 +1,7 @@
 B-Morcelli themed for the Attaky.
 This release features a complete visual re-theme based on the original work by b_morcelli, now fully redesigned to match the Attaky theme aesthetic.
+Flash from the Attaky website or via esp-tool
+The bin is there for personal customization.
 
 Key Updates
 
@@ -23,5 +25,5 @@ Smoother transitions between Apps
 Customizable UI
 
 Thanks to the Attaky firmware builder and Opencode. 
-Thanks to the open source b-morcelli launcher for a platform to build on for makers and open source projects.
+Thanks to the open source B-Morcelli launcher for a platform to build on for makers and open source projects.
 W1R3L3556H05T
