@@ -54,7 +54,7 @@ Place your choice of bin files on an SD card and install and launch to use the f
 
 ## Thanks
 
-Thanks to the Attaky firmware builder and Opencode.
+Thanks to the Attaky firmware builder and Freebuff.
 Thanks to the open source B-Morcelli launcher for a platform to build on for makers and open source projects.
 
 W1R3L3556H05T
